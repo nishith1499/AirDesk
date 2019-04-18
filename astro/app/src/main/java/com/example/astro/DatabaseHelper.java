@@ -2,6 +2,7 @@ package com.example.astro;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -41,5 +42,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery("SELECT * FROM user WHERE email=?",new String[]{email});
         if(cursor.getCount()>0)return false;
         return true;
+    }
+
+    public boolean checklogin(String name, String password)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("SELECT * FROM user WHERE name=? and password=?",new String[]{name,password});
+        if(cursor.getCount()>0) return true;
+        return false;
     }
 }

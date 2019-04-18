@@ -63,7 +63,7 @@ public class signup extends AppCompatActivity {
 
 
     }
-    
+
 
     private boolean check() {
         String name1=name.getText().toString();
