@@ -25,6 +25,15 @@ public class signup extends AppCompatActivity {
         email=(EditText)findViewById(R.id.email);
         signup=(Button)findViewById(R.id.regsignup);
         login=(Button)findViewById(R.id.reglogin);
+
+
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(signup.this,login.class));
+            }
+        });
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,30 +58,23 @@ public class signup extends AppCompatActivity {
 
                     } else Toast.makeText(getApplicationContext(),"Passwords don't match",Toast.LENGTH_SHORT).show();
 
+                }
+            });
+
+
+    }
+
+        public boolean check()
+        {
+            String name1=name.getText().toString();
+            String password1=password.getText().toString();
+            String email1=email.getText().toString();
+            String college1=college.getText().toString();
+            String phone1=phone.getText().toString();
+            String password2=confirmpassword.getText().toString();
+            if(name1.isEmpty() || phone1.isEmpty() || password1.isEmpty() || email1.isEmpty() || college1.isEmpty() || password2.isEmpty()){
+                Toast.makeText(getApplicationContext(),"Please enter the details",Toast.LENGTH_SHORT).show();return false;
             }
-        });
-
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(signup.this,login.class));
-            }
-        });
-
-
-    public boolean check()
-    {
-        String name1=name.getText().toString();
-        String password1=password.getText().toString();
-        String email1=email.getText().toString();
-        String college1=college.getText().toString();
-        String phone1=phone.getText().toString();
-        String password2=confirmpassword.getText().toString();
-        if(name1.isEmpty() || phone1.isEmpty() || password1.isEmpty() || email1.isEmpty() || college1.isEmpty() || password2.isEmpty()){
-            Toast.makeText(getApplicationContext(),"Please enter the details",Toast.LENGTH_SHORT).show();return false;
+            else return true;
         }
-        else return true;
-    }
-    }
 }
