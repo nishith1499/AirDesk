@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".signup">
 
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="120dp"
@@ -166,5 +167,6 @@
         android:layout_marginTop="303dp"
         android:ems="10"
         android:inputType="phone" />
+
 
 </RelativeLayout>
