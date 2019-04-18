@@ -16,29 +16,24 @@ import android.view.MenuItem;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity
-         {
-             Timer timer;
+public class MainActivity extends AppCompatActivity {
+    Timer timer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        timer=new Timer();
+        timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent i=new Intent(MainActivity.this,login.class);
+                Intent i = new Intent(MainActivity.this, login.class);
                 startActivity(i);
+                finish();
             }
-        },5000);
+        }, 5000);
 
 
-
-
-
+    }
 }
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> 8e288d8210b70d00f42820e2b563ef5a87ff5ad6
