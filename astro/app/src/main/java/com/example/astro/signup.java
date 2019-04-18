@@ -16,7 +16,7 @@ public class signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         name=(EditText)findViewById(R.id.name);
-        password=(EditText)findViewById(R.id.password);
+        password=(EditText)findViewById(R.id.regpassword);
         college=(EditText)findViewById(R.id.college);
         phone=(EditText)findViewById(R.id.phone);
         email=(EditText)findViewById(R.id.email);
@@ -27,7 +27,11 @@ public class signup extends AppCompatActivity {
             public void onClick(View v) {
                 if(check())
                 {
-                    
+                    String name1=name.getText().toString().trim();
+                    String password1=password.getText().toString().trim();
+                    String email1=email.getText().toString().trim();
+                    String college1=college.getText().toString().trim();
+                    String phone1=phone.getText().toString().trim();
                 }
                 startActivity(new Intent(signup.this,welcome.class));
 
