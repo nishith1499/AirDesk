@@ -1,6 +1,7 @@
 package com.example.astro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,11 +47,15 @@ public class signup extends AppCompatActivity {
                     String email1=email.getText().toString().trim();
                     String college1=college.getText().toString().trim();
                     String phone1=phone.getText().toString().trim();
+                    SharedPreferences pref = getSharedPreferences("user_details",MODE_PRIVATE);
                     if(password1.equals(password2)){
                         if(db.checkexist(email1)){
                             boolean i=db.insert(name1,password1,college1,phone1,email1);
                             if(i==true)
-                            {Toast.makeText(getApplicationContext(),"Signup successful",Toast.LENGTH_SHORT).show();
+                            {
+                                SharedPreferences.Editor editor = pref.edit();
+                                editor.putString("name", name1); editor.putString("college", college1); editor.commit();
+                                Toast.makeText(getApplicationContext(),"Signup successful",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(signup.this,welcome.class));
                             }
                         }else
