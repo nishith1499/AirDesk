@@ -5,8 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/bg"
     android:layout_height="match_parent"
-    tools:context=".login" >
+    tools:context=".login">
 
 
     <TextView
@@ -46,9 +47,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="188dp"
-        android:layout_marginLeft="188dp"
-        android:layout_marginTop="218dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="230dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter Name"
@@ -62,9 +63,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="191dp"
-        android:layout_marginLeft="191dp"
-        android:layout_marginTop="361dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="378dp"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -78,7 +79,8 @@
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
         android:layout_marginTop="522dp"
-        android:text="Signup" />
+        android:text="Signup"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <Button
         android:id="@+id/login"
@@ -90,7 +92,8 @@
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="523dp"
-        android:text="Login" />
+        android:text="Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <TextView
         android:id="@+id/textView3"
@@ -102,10 +105,12 @@
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="51dp"
-        android:fontFamily="sans-serif-black"
-        android:text="STUDENT WORKFLOW OPTIMISER"
+        android:fontFamily="casual"
+        android:text="AIRDESK"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="42sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
 
