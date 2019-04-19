@@ -4,18 +4,18 @@
 
     <TextView
         android:id="@+id/task_title"
-        android:layout_width="140dp"
-        android:layout_height="143dp"
-        android:layout_alignParentLeft="true"
+        android:layout_width="285dp"
+        android:layout_height="99dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DELETE"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        />
+       android:id="@+id/delete" />
 
 </RelativeLayout>
