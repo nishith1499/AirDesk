@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.astro">
 
     <application
@@ -9,7 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".aboutus"></activity>
+=======
+        <uses-permission android:name="android.permission.INTERNET"
+            tools:ignore="WrongManifestParent" />
+        <activity android:name=".PlayMusic"></activity>
+        <activity android:name=".todo" />
+>>>>>>> 52f95e25775aba064a617d102693b4ea590a60b6
         <activity android:name=".welcome" />
         <activity android:name=".signup" />
         <activity android:name=".home" />
@@ -24,6 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
