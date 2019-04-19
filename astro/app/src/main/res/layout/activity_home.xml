@@ -8,8 +8,10 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="336dp"
-        android:layout_height="66dp"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
         android:fontFamily="sans-serif"
         android:text="STUDENT WORKFLOW OPTIMIZER"
         android:textAlignment="center"
@@ -18,17 +20,7 @@
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="40dp" />
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.astro.MusicPlayer"
-        android:layout_width="196dp"
-        android:layout_height="640dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="86dp" />
+    
 
     <ImageButton
         android:id="@+id/play"
