@@ -54,7 +54,7 @@ public class signup extends AppCompatActivity {
                             if(i==true)
                             {
                                 SharedPreferences.Editor editor = pref.edit();
-                                editor.putString("name", name1); editor.putString("college", college1); editor.commit();
+                                editor.putString("name", name1); editor.putString("college", college1); editor.putString("email", email1);editor.commit();
                                 Toast.makeText(getApplicationContext(),"Signup successful",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(signup.this,welcome.class));
                             }
