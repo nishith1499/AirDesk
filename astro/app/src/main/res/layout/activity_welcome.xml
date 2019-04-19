@@ -4,45 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e600ac"
     tools:context=".welcome">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ag"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="40dp" />
+
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="336dp"
-        android:layout_height="66dp"
-        android:fontFamily="sans-serif"
-        android:text="STUDENT WORKFLOW OPTIMIZER"
+        android:layout_height="90dp"
+        android:fontFamily="@font/croissant_one"
+        android:text="Welcome to your  AirDesk"
         android:textAlignment="center"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="40dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="214dp"
-        android:layout_height="54dp"
-        android:text="WELCOME..."
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="147dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="410dp"
-        android:layout_height="320dp"
-        app:srcCompat="@drawable/college"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="254dp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="119dp"
-        android:layout_height="87dp"
-        app:srcCompat="@drawable/calender"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="286dp" />
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="152dp" />
 
 </android.support.constraint.ConstraintLayout>
