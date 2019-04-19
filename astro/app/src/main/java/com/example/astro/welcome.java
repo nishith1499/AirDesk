@@ -17,8 +17,8 @@ public class welcome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        SharedPreferences pref =getSharedPreferences(user_details,MODE_PRIVATE);
-        String name=pref.getString("name");
+        SharedPreferences pref =getSharedPreferences("user_details",MODE_PRIVATE);
+        String name=pref.getString("name",null);
         text.setText("Welcome "+name);
 
 
