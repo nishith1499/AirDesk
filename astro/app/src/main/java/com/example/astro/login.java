@@ -30,7 +30,7 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                boolean check= db.checklogin(name.getText().toString(),password.getText().toString());
                if(check==true){
-                   Toast.makeText(getApplicationContext(),"Login successfull",Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getApplicationContext(),"Login successful",Toast.LENGTH_SHORT).show();
 
                }
                else
