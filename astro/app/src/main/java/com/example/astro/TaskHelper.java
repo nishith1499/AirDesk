@@ -7,13 +7,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class TaskHelper extends SQLiteOpenHelper {
 
     public TaskHelper(Context context) {
-        super(context, Task.DB_NAME, null, Task.DB_VERSION);
+        super(context, "Workflow.db", null, 1);
     }
 
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "Create Table tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, task TEXT NOT NULL,email );";
+        String createTable = "Create Table tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL,email varchar(20) NOT NULL);";
         db.execSQL(createTable);
     }
 

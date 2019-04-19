@@ -1,6 +1,7 @@
 package com.example.astro;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
@@ -20,7 +21,8 @@ public class todo extends AppCompatActivity {
     private TaskHelper mHelper;
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;
-
+    SharedPreferences pref=getSharedPreferences("user_details",MODE_PRIVATE);
+    String email= (String) pref.getString("email",null);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +54,9 @@ public class todo extends AppCompatActivity {
                                 String task = String.valueOf(taskEditText.getText());
                                 SQLiteDatabase db = mHelper.getWritableDatabase();
                                 ContentValues values = new ContentValues();
-                                values.put(Task.TaskEntry.COL_TASK_TITLE, task);
-                                db.insertWithOnConflict(Task.TaskEntry.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+                                values.put("title", task);
+                                values.put("email",email);
+                                db.insertWithOnConflict("tasks", null, values, SQLiteDatabase.CONFLICT_REPLACE);
                                 db.close();
                                 update();
                             }
@@ -70,11 +73,10 @@ public class todo extends AppCompatActivity {
     private void update() {
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = mHelper.getReadableDatabase();
-        Cursor cursor = db.query(Task.TaskEntry.TABLE,
-                new String[] {Task.TaskEntry.COL_TASK_TITLE}, null, null, null, null, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM tasks WHERE email=?",new String[]{email});
 
         while (cursor.moveToNext()) {
-            int index = cursor.getColumnIndex(Task.TaskEntry.COL_TASK_TITLE);
+            int index = cursor.getColumnIndex("title");
             taskList.add(cursor.getString(index));
         }
 
@@ -87,7 +89,6 @@ public class todo extends AppCompatActivity {
             mAdapter.addAll(taskList);
             mAdapter.notifyDataSetChanged();
         }
-
         cursor.close();
         db.close();
     }
@@ -97,7 +98,7 @@ public class todo extends AppCompatActivity {
         TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
         String task = String.valueOf(taskTextView.getText());
         SQLiteDatabase db = mHelper.getWritableDatabase();
-        db.delete(Task.TaskEntry.TABLE, Task.TaskEntry.COL_TASK_TITLE + " = ?", new String[] {task});
+        db.delete("tasks", "title = ? and email=?", new String[] {task,email});
         db.close();
         update();
 
