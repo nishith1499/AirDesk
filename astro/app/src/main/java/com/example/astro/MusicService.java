@@ -1,6 +1,6 @@
 package com.example.astro;
 
-import android.app.Service;
+/*import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
@@ -30,4 +30,22 @@ public class MusicService extends Service {
         super.onDestroy();
         player.stop();
     }
+}*/
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+
+public class MusicService extends Service {
+
+    private MusicPlayer audioServiceBinder = new MusicPlayer();
+
+    public MusicService() {
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return audioServiceBinder;
+    }
 }
+
