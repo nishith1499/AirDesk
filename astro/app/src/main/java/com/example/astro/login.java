@@ -31,7 +31,7 @@ public class login extends AppCompatActivity {
                boolean check= db.checklogin(name.getText().toString(),password.getText().toString());
                if(check==true){
                    Toast.makeText(getApplicationContext(),"Login successfull",Toast.LENGTH_SHORT).show();
-                   
+
                }
                else
                    Toast.makeText(getApplicationContext(),"Name or password invalid",Toast.LENGTH_SHORT).show();
