@@ -15,8 +15,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-public class home extends AppCompatActivity implements View.OnClickListener {
-    private Button start, stop;
+public class home extends AppCompatActivity  {
+    private Button start, stop,pause,next, previous;
+    MediaPlayer player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,22 +25,31 @@ public class home extends AppCompatActivity implements View.OnClickListener {
 
         start=(Button)findViewById(R.id.startmusic);
         stop=(Button)findViewById(R.id.stopmusic);
-
-        start.setOnClickListener(this);
-        stop.setOnClickListener(this);
+        pause==(Button)findViewById(R.id.pausemusic);
+        next=(Button)findViewById(R.id.nextmusic);
+        previous=(Button)findViewById(R.id.prevmusic);
+        player=MediaPlayer.create(home.this,R.raw.);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player.setLooping(true);
+                player.start();
+            }
+        });
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player.stop();
+                player=MediaPlayer.create(home.this,R.raw.);
+            }
+        });
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player.pause();
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v) {
-        if(v==start){
-            startService(new Intent(this,MusicService.class));
-        }
-        else if(v==stop){
-            stopService(new Intent(this,MusicService.class));
-        }
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-    }
 }
