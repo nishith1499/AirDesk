@@ -37,22 +37,6 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="254dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="106dp"
-        android:layout_height="53dp"
-        android:text="PROCEED"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="610dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="96dp"
-        android:layout_height="90dp"
-        app:srcCompat="@drawable/music"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="600dp" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="119dp"
@@ -60,13 +44,5 @@
         app:srcCompat="@drawable/calender"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="286dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="109dp"
-        android:layout_height="81dp"
-        app:srcCompat="@drawable/todo"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="609dp" />
 
 </android.support.constraint.ConstraintLayout>
