@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import android.support.v4.app.FragmentManager;
@@ -28,7 +29,12 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     MediaPlayer player;
-    
+    Homehelper community;
+    SharedPreferences pref=getSharedPreferences("user_details",MODE_PRIVATE);
+    String username=pref.getString("name",null);
+    String coll=pref.getString("college",null);
+    ScrollView read;
+    private ArrayAdapter<String> mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +44,9 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        read=(ScrollView)findViewById(R.id.);
+
 
     }
 
