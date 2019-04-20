@@ -27,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean insert(String name,String password,String college, String phone,String email){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues c=new ContentValues();
-        c.put("email",email);
+        c.put("name",name);
         c.put("password",password);
         c.put("college",college);
         c.put("phone",phone);

@@ -20,12 +20,15 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Button start, stop,pause,next, previous;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     MediaPlayer player;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,4 +90,6 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
 
         return false;
     }
+
+
 }
