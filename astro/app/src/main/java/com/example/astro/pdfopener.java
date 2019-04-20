@@ -1,6 +1,7 @@
 package com.example.astro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -78,32 +79,46 @@ public class pdfopener extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id=menuItem.getItemId();
-        switch(id)
-        {
+        switch(id) {
             case R.id.nav_home:
-                Intent home=new Intent(this,home.class);
+                Intent home = new Intent(this, home.class);
                 startActivity(home);
                 break;
             case R.id.nav_library:
-                Intent lib=new Intent(this,library.class);
+                Intent lib = new Intent(this, library.class);
                 startActivity(lib);
                 break;
             case R.id.nav_playmusic:
-                Intent music=new Intent(this,PlayMusic.class);
+                Intent music = new Intent(this, PlayMusic.class);
                 startActivity(music);
                 break;
             case R.id.nav_aboutus:
-                Intent abt=new Intent(this,aboutus.class);
+                Intent abt = new Intent(this, aboutus.class);
                 startActivity(abt);
                 break;
             case R.id.nav_todo:
-                Intent to=new Intent(this,todo.class);
+                Intent to = new Intent(this, todo.class);
                 startActivity(to);
                 break;
             case R.id.nav_pdfopener:
 
                 break;
-            default:break;
+            case R.id.nav_randomfacts:
+                Intent random = new Intent(this, randomfacts.class);
+                startActivity(random);
+                break;
+            case R.id.nav_logout:
+                Intent log=new Intent(this,login.class);
+                SharedPreferences pref=getSharedPreferences("user_details",MODE_PRIVATE);
+                SharedPreferences.Editor e=pref.edit();
+                e.clear();
+
+                e.apply();
+                startActivity(log);
+                break;
+
+            default:
+                break;
         }
         return false;
     }

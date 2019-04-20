@@ -103,6 +103,10 @@ public class library extends AppCompatActivity implements NavigationView.OnNavig
                 Intent pdf=new Intent(this,pdfopener.class);
                 startActivity(pdf);
                 break;
+            case R.id.nav_randomfacts:
+                Intent random = new Intent(this, randomfacts.class);
+                startActivity(random);
+                break;
             case R.id.nav_logout:
                 Intent log=new Intent(this,login.class);
                 SharedPreferences pref=getSharedPreferences("user_details",MODE_PRIVATE);
