@@ -110,7 +110,7 @@
     android:layout_marginStart="4dp"
     android:layout_marginLeft="4dp"
     android:layout_marginTop="530dp"
-    app:srcCompat="@drawable/about_icon_email" />
+    app:srcCompat="@drawable/about" />
 
     <ImageView
         android:id="@+id/imageView7"
