@@ -12,6 +12,8 @@
         android:title="About Us"></item>
     <item android:id="@+id/nav_pdfopener"
         android:title="PDF Library"></item>
+    <item android:id="@+id/nav_randomfacts"
+        android:title="Random Facts"></item>
     <item android:id="@+id/nav_logout"
         android:title="Logout"/>
 

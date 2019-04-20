@@ -149,6 +149,10 @@ public class todo extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent pdf=new Intent(this,pdfopener.class);
                 startActivity(pdf);
                 break;
+            case R.id.nav_randomfacts:
+                Intent random=new Intent(this,randomfacts.class);
+                startActivity(random);
+                break;
             case R.id.nav_logout:
                 Intent log=new Intent(this,login.class);
                 SharedPreferences pref=getSharedPreferences("user_details",MODE_PRIVATE);
@@ -158,6 +162,8 @@ public class todo extends AppCompatActivity implements NavigationView.OnNavigati
                 e.apply();
                 startActivity(log);
                 break;
+
+
             default:break;
         }
         return false;
