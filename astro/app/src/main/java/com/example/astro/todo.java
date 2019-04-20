@@ -145,6 +145,10 @@ public class todo extends AppCompatActivity implements NavigationView.OnNavigati
             case R.id.nav_todo:
 
                 break;
+            case R.id.nav_pdfopener:
+                Intent pdf=new Intent(this,pdfopener.class);
+                startActivity(pdf);
+                break;
             default:break;
         }
         return false;

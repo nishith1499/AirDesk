@@ -1,12 +1,20 @@
 package com.example.astro;
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class pdfopener extends AppCompatActivity {
+public class pdfopener extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     PDFView pdfviewer;
+    private ActionBarDrawerToggle mToggle;
+    private DrawerLayout mDrawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +60,51 @@ public class pdfopener extends AppCompatActivity {
             pdfviewer.fromAsset("Linear algebra and its applications.pdf").load();
 
         }
+        mDrawerLayout=(DrawerLayout)findViewById(R.id.drawer_pdfopener);
+        mToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id=menuItem.getItemId();
+        switch(id)
+        {
+            case R.id.nav_home:
+                Intent home=new Intent(this,home.class);
+                startActivity(home);
+                break;
+            case R.id.nav_library:
+                Intent lib=new Intent(this,library.class);
+                startActivity(lib);
+                break;
+            case R.id.nav_playmusic:
+                Intent music=new Intent(this,PlayMusic.class);
+                startActivity(music);
+                break;
+            case R.id.nav_aboutus:
+                Intent abt=new Intent(this,aboutus.class);
+                startActivity(abt);
+                break;
+            case R.id.nav_todo:
+                Intent to=new Intent(this,todo.class);
+                startActivity(to);
+                break;
+            case R.id.nav_pdfopener:
+
+                break;
+            default:break;
+        }
+        return false;
     }
 }
