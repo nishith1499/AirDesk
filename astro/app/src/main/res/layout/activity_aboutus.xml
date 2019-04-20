@@ -102,6 +102,7 @@
             android:text="Connect With Us"
             android:textSize="24sp" />
 
+
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="65dp"
@@ -112,7 +113,21 @@
             android:layout_marginStart="4dp"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="530dp"
-            app:srcCompat="@drawable/about_icon_email" />
+            app:srcCompat="@drawable/about" />
+
+    <ImageView
+    android:id="@+id/imageView9"
+    android:layout_width="65dp"
+    android:layout_height="40dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="530dp"
+    app:srcCompat="@drawable/about"
+        tools:ignore="DuplicateIds" />
+
 
         <ImageView
             android:id="@+id/imageView7"
