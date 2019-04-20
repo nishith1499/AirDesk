@@ -19,7 +19,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -28,7 +33,7 @@ import android.widget.Toast;
 
 //import com.dev2qa.example.R;
 
-public class PlayMusic extends AppCompatActivity {
+public class PlayMusic extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private MusicPlayer audioServiceBinder = null;
 
@@ -38,6 +43,8 @@ public class PlayMusic extends AppCompatActivity {
     private ProgressBar backgroundAudioProgress;
 
     private TextView audioFileUrlTextView;
+    private ActionBarDrawerToggle mToggle;
+    private DrawerLayout mDrawerLayout;
 
     // This service connection object is the bridge between activity and background service.
     private ServiceConnection serviceConnection = new ServiceConnection() {
@@ -122,6 +129,11 @@ public class PlayMusic extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Stop play web audio file.", Toast.LENGTH_LONG).show();
             }
         });
+        mDrawerLayout=(DrawerLayout)findViewById(R.id.drawer_music);
+        mToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     // Bind background service with caller activity. Then this activity can use
@@ -174,5 +186,41 @@ public class PlayMusic extends AppCompatActivity {
                 }
             };
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id=menuItem.getItemId();
+        switch(id)
+        {
+            case R.id.nav_home:
+                Intent home=new Intent(this,home.class);
+                startActivity(home);
+                break;
+            case R.id.nav_library:
+                Intent lib=new Intent(this,library.class);
+                startActivity(lib);
+                break;
+            case R.id.nav_playmusic:
+
+                break;
+            case R.id.nav_aboutus:
+                Intent abt=new Intent(this,aboutus.class);
+                startActivity(abt);
+                break;
+            case R.id.nav_todo:
+                Intent to=new Intent(this,todo.class);
+                startActivity(to);
+                break;
+            default:break;
+        }
+        return false;
     }
 }
