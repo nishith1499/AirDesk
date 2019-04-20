@@ -47,7 +47,7 @@ public class pdfopener extends AppCompatActivity implements NavigationView.OnNav
         }
 
         if(getItem.equals("Database Management Systems")){
-            pdfviewer.fromAsset(".pdf").load();
+            pdfviewer.fromAsset("Fundamentals of Database Systems (7ed) - Elmasri Navathe.pdf").load();
 
         }
 
