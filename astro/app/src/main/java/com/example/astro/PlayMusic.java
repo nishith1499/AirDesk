@@ -15,6 +15,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -222,6 +223,15 @@ public class PlayMusic extends AppCompatActivity implements NavigationView.OnNav
             case R.id.nav_pdfopener:
                 Intent pdf=new Intent(this,pdfopener.class);
                 startActivity(pdf);
+                break;
+            case R.id.nav_logout:
+                Intent log=new Intent(this,login.class);
+                SharedPreferences pref=getSharedPreferences("user_details",MODE_PRIVATE);
+                SharedPreferences.Editor e=pref.edit();
+                e.clear();
+
+                e.apply();
+                startActivity(log);
                 break;
             default:break;
         }
