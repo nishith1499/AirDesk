@@ -10,5 +10,7 @@
         android:title="Todo"></item>
     <item android:id="@+id/nav_aboutus"
         android:title="About Us"></item>
+    <item android:id="@+id/nav_pdfopener"
+        android:title="PDF Library"></item>
 
 </menu>

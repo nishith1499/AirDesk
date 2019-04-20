@@ -59,10 +59,7 @@ public class library extends AppCompatActivity implements NavigationView.OnNavig
         });
 
 
-        pdfListView=(ListView)findViewById(R.id.PDFList);
-        String[] pdfFiles={"Android book","MPCA-1","MPCA-2","MPCA-3","MPCA-4","Database Management Systems","Design and analysis of algorithms",
-        "Linear Algebra"};
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+
         mDrawerLayout=(DrawerLayout)findViewById(R.id.drawer_library);
         mToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
@@ -100,6 +97,10 @@ public class library extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.nav_todo:
                 Intent to=new Intent(this,todo.class);
                 startActivity(to);
+                break;
+            case R.id.nav_pdfopener:
+                Intent pdf=new Intent(this,pdfopener.class);
+                startActivity(pdf);
                 break;
             default:break;
         }

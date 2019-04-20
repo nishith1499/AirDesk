@@ -219,6 +219,10 @@ public class PlayMusic extends AppCompatActivity implements NavigationView.OnNav
                 Intent to=new Intent(this,todo.class);
                 startActivity(to);
                 break;
+            case R.id.nav_pdfopener:
+                Intent pdf=new Intent(this,pdfopener.class);
+                startActivity(pdf);
+                break;
             default:break;
         }
         return false;
