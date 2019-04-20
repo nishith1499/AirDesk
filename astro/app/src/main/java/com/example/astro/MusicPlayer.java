@@ -94,9 +94,7 @@ public class MusicPlayer extends Fragment {
 
         import java.io.IOException;
 
-/**
- * Created by Jerry on 2/15/2018.
- */
+
 
 public class MusicPlayer extends Binder {
 
