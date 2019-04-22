@@ -1,16 +1,7 @@
 package com.example.astro;
 
-/*import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class PlayMusic extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play_music);
-    }
-}*/
+import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -80,7 +71,7 @@ public class PlayMusic extends AppCompatActivity implements NavigationView.OnNav
         if(audioFileUrlTextView != null)
         {
             // Show web audio file url in the text view.
-            audioFileUrlTextView.setText("Audio File Url. \n" + audioFileUrl);
+            audioFileUrlTextView.setText("Audio File Url. \r\n" + audioFileUrl);
         }
 
         // Click this button to start play audio in a background service.
@@ -166,6 +157,7 @@ public class PlayMusic extends AppCompatActivity implements NavigationView.OnNav
 
     // Create audio player progressbar updater.
     // This updater is used to update progressbar to reflect audio play process.
+    @SuppressLint("HandlerLeak")
     private void createAudioProgressbarUpdater()
     {
         /* Initialize audio progress handler. */
