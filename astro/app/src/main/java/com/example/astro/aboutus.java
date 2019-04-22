@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class aboutus extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -19,6 +20,8 @@ public class aboutus extends AppCompatActivity implements NavigationView.OnNavig
     private ActionBarDrawerToggle mToggle;
     private DrawerLayout mDrawerLayout;
     private Button ajeya,nishith,sudhanva,abhinav;
+    private TextView details;
+
 
 
     @Override
@@ -35,31 +38,31 @@ public class aboutus extends AppCompatActivity implements NavigationView.OnNavig
         sudhanva = (Button)findViewById(R.id.sudhanva);
         abhinav = (Button)findViewById(R.id.abhinav);
         nishith = (Button)findViewById(R.id.nishith);
+        details = (TextView)findViewById(R.id.details);
 
         ajeya.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(getApplicationContext(), "AJEYA B.S: PES120171604", Toast.LENGTH_SHORT).show();
+                details.setText("AJEYA B.S: PES1201701604");
             }
 
         });
 
         sudhanva.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(getApplicationContext(), "SUDHANVA SRINIVAS: PES1201700200", Toast.LENGTH_SHORT).show();
+                details.setText("SUDHANVA SRINIVAS: PES1201700200");
             }
 
         });
 
         abhinav.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(getApplicationContext(), "ABHINAV B.M: PES1201701500", Toast.LENGTH_SHORT).show();
+                details.setText("ABHINAV B.M: PES1201701500");
             }
-
         });
 
         nishith.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(getApplicationContext(), "NISHITH VIHAR: PES1201701897", Toast.LENGTH_SHORT).show();
+                details.setText("NISHITH VIHAR: PES1201701897");
             }
         });
     }
