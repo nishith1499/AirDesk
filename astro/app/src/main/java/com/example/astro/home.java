@@ -46,15 +46,15 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
         mToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
-        title=(EditText)findViewById(R.id.titlecomm);
-        description=(EditText)findViewById(R.id.descriptioncomm);
+        //title=(EditText)findViewById(R.id.titlecomm);
+       // description=(EditText)findViewById(R.id.descriptioncomm);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         write=(Button)findViewById(R.id.writecomment);
         write.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean i=community.insert(username,coll,title,description);
-                //
+                boolean i= (boolean) community.insert(username,coll,title.getText().toString(),description.getText().toString());
+
                 if(i==true)
 
                     Toast.makeText(getApplicationContext(),"Inserted",Toast.LENGTH_SHORT).show();
