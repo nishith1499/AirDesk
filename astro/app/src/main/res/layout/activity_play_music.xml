@@ -8,41 +8,73 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"><TextView
-        android:id="@+id/audio_file_url_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20dp" />
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/start_audio_in_background"
+        <TextView
+            android:id="@+id/audio_file_url_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play Audio In Background Service"
-            android:textAllCaps="false"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="537dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/pause_audio_in_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="158dp"
             android:text="Pause Audio In Background Service"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/stop_audio_in_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="252dp"
             android:text="Stop Audio In Background Service"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/start_audio_in_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="50dp"
+            android:text="Play Audio In Background Service"
             android:textAllCaps="false" />
 
         <ProgressBar
             android:id="@+id/play_audio_in_background_service_progressbar"
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:max="100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible"/></RelativeLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="370dp"
+            android:max="100"
+            android:visibility="invisible" /></RelativeLayout>
     <android.support.design.widget.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
