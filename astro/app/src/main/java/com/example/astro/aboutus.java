@@ -38,7 +38,7 @@ public class aboutus extends AppCompatActivity implements NavigationView.OnNavig
 
         ajeya.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(getApplicationContext(), "AJEYA B.S: PES120171604", Toast.LENGTH_SHORT).show();
+                textviewvar.setText("");
             }
 
         });
