@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Stop Audio In Background Service"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
 
         <ProgressBar
             android:id="@+id/play_audio_in_background_service_progressbar"
