@@ -48,6 +48,7 @@ public class login extends AppCompatActivity {
                    e.putString("name",name.getText().toString());
                    e.putString("email",email.getText().toString());
                    e.putString("college",coll);
+                   e.apply();
                    Toast.makeText(getApplicationContext(),"Login successful",Toast.LENGTH_SHORT).show();
                    startActivity(new Intent(login.this,home.class));
 
