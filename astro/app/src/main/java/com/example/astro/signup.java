@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class signup extends AppCompatActivity {
+public class
+
+signup extends AppCompatActivity {
     private EditText name,password,college,phone,email,confirmpassword;
     private Button signup,login;
     DatabaseHelper db;

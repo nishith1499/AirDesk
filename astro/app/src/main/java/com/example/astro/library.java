@@ -87,10 +87,7 @@ public class library extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.nav_library:
 
                 break;
-            case R.id.nav_playmusic:
-                Intent music=new Intent(this,PlayMusic.class);
-                startActivity(music);
-                break;
+
             case R.id.nav_aboutus:
                 Intent abt=new Intent(this,aboutus.class);
                 startActivity(abt);
