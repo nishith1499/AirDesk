@@ -89,10 +89,10 @@ public class PlayMusic extends AppCompatActivity implements NavigationView.OnNav
             @Override
             public void onClick(View view) {
                 // Set web audio file url
-                audioServiceBinder.setAudioFileUrl(audioFileUrl);
+                audioServiceBinder.setAudioFileUrl();
 
                 // Web audio is a stream audio.
-                audioServiceBinder.setStreamAudio(true);
+                audioServiceBinder.setStreamAudio();
 
                 // Set application context.
                 audioServiceBinder.setContext(getApplicationContext());

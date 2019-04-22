@@ -13,4 +13,7 @@
     <string name="student_workflow_optimizer">STUDENT WORKFLOW OPTIMIZER</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="play_audio_in_background_service">Play Audio In Background Service</string>
+    <string name="pause_audio_in_background_service">Pause Audio In Background Service</string>
+    <string name="stop_audio_in_background_service">Stop Audio In Background Service</string>
 </resources>

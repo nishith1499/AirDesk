@@ -118,7 +118,7 @@ public class MusicPlayer extends Binder {
     private Handler audioProgressUpdateHandler;
 
     // This is the message signal that inform audio progress updater to update audio progress.
-    public final int UPDATE_AUDIO_PROGRESS_BAR = 1;
+    final int UPDATE_AUDIO_PROGRESS_BAR = 1;
 
     public Context getContext() {
         return context;
@@ -128,23 +128,23 @@ public class MusicPlayer extends Binder {
         this.context = context;
     }
 
-    public String getAudioFileUrl() {
+    private String getAudioFileUrl() {
         return audioFileUrl;
     }
 
-    public void setAudioFileUrl(String audioFileUrl) {
-        this.audioFileUrl = audioFileUrl;
+    void setAudioFileUrl() {
+        this.audioFileUrl = "http://www.dev2qa.com/demo/media/test.mp3";
     }
 
-    public boolean isStreamAudio() {
+    private boolean isStreamAudio() {
         return streamAudio;
     }
 
-    public void setStreamAudio(boolean streamAudio) {
-        this.streamAudio = streamAudio;
+    void setStreamAudio() {
+        this.streamAudio = true;
     }
 
-    public Uri getAudioFileUri() {
+    private Uri getAudioFileUri() {
         return audioFileUri;
     }
 
@@ -156,12 +156,12 @@ public class MusicPlayer extends Binder {
         return audioProgressUpdateHandler;
     }
 
-    public void setAudioProgressUpdateHandler(Handler audioProgressUpdateHandler) {
+    void setAudioProgressUpdateHandler(Handler audioProgressUpdateHandler) {
         this.audioProgressUpdateHandler = audioProgressUpdateHandler;
     }
 
     // Start play audio.
-    public void startAudio()
+    void startAudio()
     {
         initAudioPlayer();
         if(audioPlayer!=null) {
@@ -170,7 +170,7 @@ public class MusicPlayer extends Binder {
     }
 
     // Pause playing audio.
-    public void pauseAudio()
+    void pauseAudio()
     {
         if(audioPlayer!=null) {
             audioPlayer.pause();
@@ -178,7 +178,7 @@ public class MusicPlayer extends Binder {
     }
 
     // Stop play audio.
-    public void stopAudio()
+    void stopAudio()
     {
         if(audioPlayer!=null) {
             audioPlayer.stop();
@@ -254,7 +254,7 @@ public class MusicPlayer extends Binder {
     }
 
     // Return current audio play position.
-    public int getCurrentAudioPosition()
+    private int getCurrentAudioPosition()
     {
         int ret = 0;
         if(audioPlayer != null)
@@ -265,7 +265,7 @@ public class MusicPlayer extends Binder {
     }
 
     // Return total audio file duration.
-    public int getTotalAudioDuration()
+    private int getTotalAudioDuration()
     {
         int ret = 0;
         if(audioPlayer != null)
@@ -276,7 +276,7 @@ public class MusicPlayer extends Binder {
     }
 
     // Return current audio player progress value.
-    public int getAudioProgress()
+    int getAudioProgress()
     {
         int ret = 0;
         int currAudioPosition = getCurrentAudioPosition();
