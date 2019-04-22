@@ -25,7 +25,7 @@
         tools:layout_editor_absoluteY="40dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/writecomment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -37,6 +37,7 @@
         android:text="Write" />
 
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="366dp"
         android:layout_alignParentStart="true"

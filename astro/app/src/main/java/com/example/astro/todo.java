@@ -22,7 +22,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class todo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private static final String TAG = "MainActivity";
+
     private TaskHelper mHelper;
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;

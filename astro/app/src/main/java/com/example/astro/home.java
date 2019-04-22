@@ -20,15 +20,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private Button start, stop,pause,next, previous;
+    private Button write;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     MediaPlayer player;
+    private EditText title,description;
     Homehelper community;
     SharedPreferences pref=getSharedPreferences("user_details",MODE_PRIVATE);
     String username=pref.getString("name",null);
@@ -43,10 +46,24 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
         mToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
+        title=(EditText)findViewById(R.id.titlecomm);
+        description=(EditText)findViewById(R.id.descriptioncomm);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        write=(Button)findViewById(R.id.writecomment);
+        write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean i=community.insert(username,coll,title,description);
+                //
+                if(i==true)
 
-        read=(ScrollView)findViewById(R.id.);
+                    Toast.makeText(getApplicationContext(),"Inserted",Toast.LENGTH_SHORT).show();
+            else
+                    Toast.makeText(getApplicationContext(),"Not inserted",Toast.LENGTH_SHORT).show();
 
+        }});
+
+        read=(ScrollView)findViewById(R.id.scroll);
 
     }
 
