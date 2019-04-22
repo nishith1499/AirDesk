@@ -14,7 +14,7 @@
 
         android:theme="@style/AppTheme">
         <activity android:name=".randomfacts"></activity>
-        
+
         <activity android:name=".pdfopener"></activity>
         <activity android:name=".library" />
         <activity android:name=".aboutus" />
