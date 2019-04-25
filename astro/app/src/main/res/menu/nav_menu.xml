@@ -7,12 +7,12 @@
     <item android:id="@+id/nav_todo"
         android:title="Todo"></item>
     <item android:id="@+id/nav_aboutus"
-        android:title="About Us"></item>
+        android:title="@string/about_us"></item>
     <item android:id="@+id/nav_pdfopener"
-        android:title="PDF Library"></item>
+        android:title="@string/pdf_library"></item>
     <item android:id="@+id/nav_randomfacts"
-        android:title="Random Facts"></item>
+        android:title="@string/random_facts"></item>
     <item android:id="@+id/nav_logout"
-        android:title="Logout"/>
+        android:title="@string/logout"/>
 
 </menu>
