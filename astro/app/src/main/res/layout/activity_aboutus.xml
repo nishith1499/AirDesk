@@ -51,32 +51,6 @@
             android:textSize="19sp" />
 
         <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="86dp"
-            android:layout_marginLeft="86dp"
-            android:layout_marginTop="581dp"
-            android:text="Call Us"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="87dp"
-            android:layout_marginLeft="87dp"
-            android:layout_marginTop="530dp"
-            android:text="Mail Us"
-            android:textSize="24sp" />
-
-        <TextView
             android:id="@+id/textView17"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -104,44 +78,6 @@
 
 
         <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="65dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="530dp"
-            app:srcCompat="@drawable/about" />
-
-    <ImageView
-    android:id="@+id/imageView9"
-    android:layout_width="65dp"
-    android:layout_height="40dp"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginStart="4dp"
-    android:layout_marginLeft="4dp"
-    android:layout_marginTop="530dp"
-    app:srcCompat="@drawable/about"
-        tools:ignore="DuplicateIds" />
-
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="65dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="580dp"
-            app:srcCompat="@drawable/phone" />
-
-        <ImageView
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -151,7 +87,56 @@
             android:layout_marginStart="92dp"
             android:layout_marginLeft="92dp"
             android:layout_marginTop="142dp"
-            app:srcCompat="@drawable/about" /></RelativeLayout>
+            app:srcCompat="@drawable/about" />
+
+        <Button
+            android:id="@+id/ajeya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="531dp"
+            android:text="AJEYA" />
+
+        <Button
+            android:id="@+id/abhinav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="276dp"
+            android:layout_marginLeft="276dp"
+            android:layout_marginTop="529dp"
+            android:text="ABHINAV" />
+
+        <Button
+            android:id="@+id/sudhanva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="615dp"
+            android:text="SUDHANVA" />
+
+        <Button
+            android:id="@+id/nishith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="276dp"
+            android:layout_marginLeft="276dp"
+            android:layout_marginTop="614dp"
+            android:text="NISHITH" />
+    </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
