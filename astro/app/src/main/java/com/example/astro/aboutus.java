@@ -10,11 +10,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class aboutus extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private ActionBarDrawerToggle mToggle;
     private DrawerLayout mDrawerLayout;
+    private Button ajeya,nishith,sudhanva,abhinav;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,38 @@ public class aboutus extends AppCompatActivity implements NavigationView.OnNavig
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ajeya = (Button)findViewById(R.id.ajeya);
+        sudhanva = (Button)findViewById(R.id.sudhanva);
+        abhinav = (Button)findViewById(R.id.abhinav);
+        nishith = (Button)findViewById(R.id.nishith);
+
+        ajeya.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                textviewvar.setText("");
+            }
+
+        });
+
+        sudhanva.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(getApplicationContext(), "SUDHANVA SRINIVAS: PES1201700200", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        abhinav.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(getApplicationContext(), "ABHINAV B.M: PES1201701500", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        nishith.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(getApplicationContext(), "NISHITH VIHAR: PES1201701897", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
