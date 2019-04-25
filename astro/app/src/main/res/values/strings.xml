@@ -16,4 +16,8 @@
     <string name="play_audio_in_background_service">Play Audio In Background Service</string>
     <string name="pause_audio_in_background_service">Pause Audio In Background Service</string>
     <string name="stop_audio_in_background_service">Stop Audio In Background Service</string>
+    <string name="logout">Logout</string>
+    <string name="random_facts">Random Facts</string>
+    <string name="pdf_library">PDF Library</string>
+    <string name="about_us">About Us</string>
 </resources>
